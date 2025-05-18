@@ -1,101 +1,159 @@
-# Chat Bot
+Sure — here’s a clean, organized, professional `README.md` draft you can use for your project:
 
-## Overview
+---
 
-This project is a chat bot leveraging OpenAI's GPT-3.5 Turbo model, implemented
-using React for the front end, Express for the backend, and MongoDB for data
-storage. The application provides users with an interactive interface to engage
-in natural language conversations with the GPT-3.5 Turbo model.
+# 🧠 Minimal AI Customer Support Agent
 
-## Features
+A full-stack AI-powered customer support chat application that allows users to sign up, log in, chat with an AI assistant (powered by Gemini API), and view their chat history. The app is built with **React** for the frontend, **Node.js + Express** for the backend, and **MongoDB Atlas** for chat history storage. Authentication is handled with **JWT** and **bcrypt** for secure password hashing.
 
-- **Conversational Interface:** Users can have dynamic and natural language
-  conversations by inputting prompts or queries.
+---
 
-- **Backend Integration:** The Express backend manages communication with the
-  OpenAI API, handling requests and responses seamlessly.
+## 📸 Demo
 
-- **Data Persistence:** MongoDB is employed for storing user data, including
-  prompts and model responses.
+ [Live on Vercel](https://minimal-assist.vercel.app)
 
-## Prerequisites
+---
 
-Before running the application, ensure you have the following installed:
+## 🚀 Features
 
-- Node.js
-- npm (Node Package Manager)
-- MongoDB
+✅ User Authentication (Signup / Login / Logout)
+✅ JWT-based protected routes
+✅ Password hashing with bcrypt
+✅ AI-powered chat using **Gemini API**
+✅ Save and display user-scoped chat history
+✅ Clean and minimal React chat UI
+✅ Dockerized for easy local deployment
+✅ Deployed frontend and backend on free-tier platforms
 
-## Setup
+---
 
-1.  Clone the repository:
+## 🛠️ Tech Stack
 
-    ```bash
-    git clone https://github.com/yashkathe/AI-Chat-Bot-MERN.git
-    ```
+| Layer                | Tech                                |
+| :------------------- | :---------------------------------- |
+| **Frontend**         | React (Vite)                        |
+| **Backend**          | Node.js + Express                   |
+| **Database**         | MongoDB Atlas (Free Tier)           |
+| **Auth**             | JWT + bcrypt                        |
+| **AI**               | Gemini API                          |
+| **Hosting**          | Vercel (Frontend), Render (Backend) |
+| **Containerization** | Docker, Docker Compose              |
 
-2.  Navigate to the project directory:
+---
 
-    ```bash
-    cd AI-Chat-Bot-MERN
-    ```
+## 📂 Project Structure
 
-3.  Install dependencies for both the client and server:
+```
+├── frontend/           # React frontend
+├── server/           # Node.js + Express backend
+├── README.md
+```
 
-    ```bash
-    # Install frontend dependencies
-    cd frontend
-    npm install
+---
 
-    # Install backend dependencies
-    cd backend
-    npm install
-    ```
+## 📖 API Endpoints
 
-4.  Configure environment variables:
+### 🔐 Auth Routes (`/auth`)
 
-    Modify the `.env.txt` file in the `backend` directory and add the following variables and rename it to `.env`:
+* `POST /signup` – Register a new user
+* `POST /login` – Authenticate user and return JWT
 
-        ```bash
-        OPENAI_API_KEY=your_openai_api_key
-        MONGODB_URI=your_mongodb_uri
-        ```
+### 💬 Chat Routes (`/chat`)
 
-5.  Start the application:
+* `POST /send` – Send a message, receive AI response
+* `GET /history` – Fetch user's chat history
 
-    ```bash
-    # Start the client (in the frontend directory)
-    cd frontend
-    npm run dev
+---
 
-    # Start the server (in the backed directory)
-    cd backend
-    npm run dev
-    ```
+## 📦 Environment Variables
 
-## Notes
+Create `.env` files in both `client/` and `server/` directories based on the provided `.env.example` files.
 
-- Make sure to replace `your_openai_api_key` and `your_mongodb_uri` with your
-  actual OpenAI API key and MongoDB connection URI in the `.env` file.
+**Example for server/.env**
 
-## Website Screenshots
+```env
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+GEMINI_API_KEY=your_gemini_api_key
+```
+```
 
-### Home Page
+The frontend will be accessible at `http://localhost:3000`
+The backend will be running at `http://localhost:5000`
 
-![Home Page](readme_content/home.png)
+---
 
-### Login Page
+## 🌍 Deployment
 
-![Login](readme_content/auth_login.png)
+* **Frontend** deployed on **Vercel**
+* **Backend** deployed on **Render**
 
-### SignUp Page
+---
 
-![Signup](readme_content/auth_signup.png)
+## ✨ Bonus (Optional Improvements)
 
-### Chat Page
+* [ ] Typing indicator
+* [ ] Rate limiting via `express-rate-limit`
+* [ ] Environment switching for dev/prod configs
 
-![Empty Chat](readme_content/empty_chat.png)
+---
 
-## Website Demo
+## 📑 Setup Instructions
 
-![Website Demo](readme_content/demo.gif)
+### 📦 Install Dependencies
+
+**Backend**
+
+```bash
+cd server
+npm install
+```
+
+**Frontend**
+
+```bash
+cd frontend
+npm install
+```
+
+### 🔑 Add Environment Variables
+
+Copy `.env.example` files and fill them out.
+
+### ▶️ Run Locally
+
+**Backend**
+
+```bash
+npm run dev
+```
+
+**Frontend**
+
+```bash
+npm run dev
+```
+
+---
+
+## 📜 License
+
+MIT License
+
+---
+
+## 🤝 Acknowledgments
+
+* [Gemini API](https://ai.google.dev/)
+* [Vercel](https://vercel.com/)
+* [Render](https://render.com/)
+* [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
+
+---
+
+## 📧 Contact
+
+For any questions or feedback, feel free to reach out at [rishuraj2401sinha@gmail.com](rishuraj2401sinha@gmail.com)
+
+---
