@@ -13,7 +13,7 @@ import { useAuth } from "../context/context";
 
 import axios from "axios";
 import toast from "react-hot-toast";
-axios.defaults.baseURL = "http://51.79.142.144:5001/api";
+axios.defaults.baseURL = "https://minimalassist-1.onrender.com/api";
 axios.defaults.withCredentials = true; // Enable sending credentials (e.g., cookies) in cross-origin requests
 
 const Signup = () => {
